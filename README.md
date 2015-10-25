@@ -25,6 +25,25 @@ time520   | The time to travel from source to dest in minutes via SR-520.
 fuel90    | The cost of fuel the average 4 door vehicle will burn traveling from source to dest taking I-90.  This is calculated using market rates for fuel provided by Federal reports released weekly.
 time90    | The time to travel from source to dest in minutes via I-90.
 
+### vAverageTravelTimesByDOW schema
+This table is a summarization of the bridge_histories table by day of week, by 5 minute increments, by route.
+
+Column     | Description
+---------- | -----------
+source     | Location where the vehicle would be originating from on the route estimate.
+dest       | Location where the vehicle would be arriving to on the route estimate.
+dow        | The day of the week starting from Sunday = 1, Saturday = 7
+time       | The time of day on the day of the week
+avgTime520 | The average time it takes in minutes to travel from source to dest via SR-520.
+stdDev520  | The standard deviation on the time it takes to travel from source to dest via SR-520.
+sampleSize | The number of samples observed for the day of week and time.
+min520     | The minimum time observed to travel from source to dest via SR-520 at this day of week and time.
+max520     | The maximum time observed to travel from source to dest via SR-520 at this day of week and time.
+avgTime90  | Theaverage time it takes in minutes to travel from source to dest via I-90.
+stdDev90   | The standard deviation on the time it takes to travel from source to dest via I-90.
+min90      | The minimum time observed to travel from source to dest via I-90 at this day of week and time.
+max90      | The maximum time observed to travel from source to dest via I-90 at this day of week and time.
+
 ## Data Formats Available
 
 ### 520or90-HistoricalData.sql.zip
@@ -33,4 +52,6 @@ This file contains two SQL tables dumped from MySQL with two tables: bridge_hist
 ### 520or90-HistoricalData.csv.zip
 This file contains two CSV files, bridge_closures.csv and bridge_histories.csv
 
+### 520or90-TravelTimesByDOW.csv.zip
+This file contains a single CSV table, vAverageTravelTimesByDOW.csv
 
