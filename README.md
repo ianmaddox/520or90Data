@@ -2,7 +2,7 @@
 The 520 or 90 project was a mobile application that was concepted and built at Startup Weekend in Seattle.  The aim of the application was to quickly help a driver determine what bridge is faster or cheaper in less than 10 seconds.  As part of operating the service for over 3 years, we've collected a large amount of travel data that others can use to get interesting information about Seattle's traffic.  For more information, feel free to contact me on Twitter: @gabosgab
 
 ## Data Schema
-Data provided for travel times was sampled from Jan 2nd, 2012 to August 20th, 2015.  Not all closures were captured correctly as it was a manual process for entry.
+Data provided for travel times was sampled from Jan 2nd, 2012 to August 20th, 2015.  Not all closures were captured correctly as it was a manual process for entry.  All data was collected from Washington State Department of Transportation public route travel data service. http://wsdot.com/traffic/api/?_ga=1.96098261.877723817.1445755577
 
 ### bridge_closures schema
 Column    | Description
